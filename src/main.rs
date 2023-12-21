@@ -36,8 +36,8 @@ fn help_command(program: &str, mut args: env::Args) -> ExitCode {
     return ExitCode::SUCCESS;
 }
 
-#[command("cp", "add, commit and push with, pass flag -m to add a message")]
-fn commit_and_push(program: &str, mut args: env::Args) -> ExitCode {
+#[command("acp", "add, commit and push with, pass flag -m to add a message")]
+fn commit_and_push(_program: &str, mut args: env::Args) -> ExitCode {
     if let Some(flag) = args.next() {
         let res = match flag.as_str() {
             "--m" => match args.next() {
