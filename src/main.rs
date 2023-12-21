@@ -40,7 +40,7 @@ fn help_command(program: &str, mut args: env::Args) -> ExitCode {
 fn commit_and_push(_program: &str, mut args: env::Args) -> ExitCode {
     if let Some(flag) = args.next() {
         let res = match flag.as_str() {
-            "--m" => match args.next() {
+            "-m" => match args.next() {
                 Some(message) => {
                     git_add().unwrap();
                     git_commit(&message).unwrap();

@@ -34,7 +34,6 @@ pub fn git_commit(message: &str) -> Result<(), ()> {
         eprintln!("Unespected error in commit: {stderr_str}");
         std::process::exit(1)
     }
-    println!("Commit feito com sucesso!");
     Ok(())
 }
 
@@ -49,6 +48,5 @@ pub fn git_push() -> Result<(), ()> {
         eprintln!("Unespected error in commit: {stderr_str}");
         std::process::exit(1)
     }
-    println!("Commit feito com sucesso!");
     Ok(())
 }
