@@ -21,7 +21,7 @@ pub fn command(args: TokenStream, item: TokenStream) -> TokenStream {
         None => panic!("Expected literal but got nothing"),
     };
     match args_iter.next() {
-        Some(TokenTree::Punct(punct)) => {}
+        Some(TokenTree::Punct(_punct)) => {}
         Some(_token) => panic!("Expected punct but got something else"),
         None => panic!("Expected punct but got nothing"),
     };
@@ -34,7 +34,7 @@ pub fn command(args: TokenStream, item: TokenStream) -> TokenStream {
 
     let mut item_iter = item.clone().into_iter();
     match item_iter.next() {
-        Some(TokenTree::Ident(ident)) => {}
+        Some(TokenTree::Ident(_ident)) => {}
         Some(_token) => panic!("Expected ident but got something else"),
         None => panic!("Expected ident but got nothing"),
     };

@@ -1,4 +1,4 @@
-use std::process::{Command, ExitCode};
+use std::process::Command;
 
 pub fn git_add() -> Result<(), ()> {
     let output = Command::new("git").arg("add").arg(".").output().unwrap();
